@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:https://stupeni-a.com.ua/cdn-cgi/l/email-protection
+Disallow:https://stupeni-a.com.ua/comments.txt
+Disallow:https://stupeni-a.com.ua/qrcode.php

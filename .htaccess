@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.stupeni-a.com.ua [NC]
+RewriteRule ^(.*)$ https://stupeni-a.com.ua/$1 [L,R=301,NC] 
+
+Redirect 301 /post3.php   https://stupeni-a.com.ua/proektirovanie-lestnits.php
+Redirect 301 /post2.php   https://stupeni-a.com.ua/proektirovanie-gnutoy-lestnitsyi-s-zavorotom-na-180-gradusov.php
+Redirect 301 /post5.php   https://stupeni-a.com.ua/slovar-lestnichnyih-terminov.php
+Redirect 301 /post4.php   https://stupeni-a.com.ua/betonnaya-lestnitsa-dlya-doma-svoimi-rukami.php
+Redirect 301 /portfolio2.php   https://stupeni-a.com.ua/betonnyie-lestnitsyi.php
+Redirect 301 /index.php/tsena   https://stupeni-a.com.ua/stoimost-betonnoy-lestnitsyi.php
+Redirect 301 /index.php/fotogallereya/3d-proekty   https://stupeni-a.com.ua/3d-proektyi-lestnits.php
+Redirect 301 /index.php/fotogallereya/foto-nashikh-rabot   https://stupeni-a.com.ua/betonnyie-lestnitsyi.php
+Redirect 301 /calculate.php   https://stupeni-a.com.ua/stoimost-betonnoy-lestnitsyi.php
+Redirect 301 /portfolio1.php   https://stupeni-a.com.ua/3d-proektyi-lestnits.php
+Redirect 301 /portfolio3.php   https://stupeni-a.com.ua/gotovyie-lestnitsyi.php
+Redirect 301 /index.php/fo...-nashikh-rabot  https://stupeni-a.com.ua/betonnyie-lestnitsyi.php
+
+
+<Files "comments.txt">
+Deny from all
+</Files>
