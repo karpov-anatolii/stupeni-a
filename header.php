@@ -50,10 +50,12 @@ if ($id != "") {
 
 
 $version_site = "ru";
+//$version_sitename = "https://stupeni-a.com.ua";
+$version_sitename = "https://stupeni-a.netlify.app";
 // список языков
 $sites = array(
-  "ru" => "https://stupeni-a.com.ua" . $_SERVER['REQUEST_URI'],
-  "uk" => "https://stupeni-a.com.ua/uk-ua" . $_SERVER['REQUEST_URI'],
+  "ru" => $version_sitename . $_SERVER['REQUEST_URI'],
+  "uk" => $version_sitename. "/uk-ua" . $_SERVER['REQUEST_URI'],
 );
 // получаем язык
 $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
@@ -241,11 +243,11 @@ if (!$meta_rights) $meta_rights = "Ступени-А";
         </div>
         <!-- multy lang  -->
         <div class="div-multy-lang">
-          <a style="color:#eee;font-family: 'Ubuntu', sans-serif;" href="https://stupeni-a.com.ua/uk-ua<?php echo str_replace('', '', $_SERVER['REQUEST_URI']) ?>">UA</a>
+          <a style="color:#eee;font-family: 'Ubuntu', sans-serif;" href="<?php echo $version_sitename . "/uk-ua" . str_replace('', '', $_SERVER['REQUEST_URI']) ?>">UA</a>
           <span>&nbsp;|&nbsp; </span>
-          <a style="color:#eee;font-family: 'Ubuntu', sans-serif;" href="https://stupeni-a.com.ua<?php echo str_replace('', '', $_SERVER['REQUEST_URI']) ?>">RU</a>
+          <a style="color:#eee;font-family: 'Ubuntu', sans-serif;" href="<?php echo $version_sitename . str_replace('', '', $_SERVER['REQUEST_URI']) ?>">RU</a>
           <span>&nbsp;|&nbsp; </span>
-          <a style="color:#eee;font-family: 'Ubuntu', sans-serif;" href="https://stupeni-a.com.ua/en<?php echo str_replace('', '', $_SERVER['REQUEST_URI']) ?>">EN</a>
+          <a style="color:#eee;font-family: 'Ubuntu', sans-serif;" href="<?php echo $version_sitename . "/en" .  str_replace('', '', $_SERVER['REQUEST_URI']) ?>">EN</a>
         </div>
 
 
